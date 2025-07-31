@@ -2,7 +2,7 @@
 # TechScamBlock
 
 > [!NOTE]
-> This is not made by the original team, but a simple port to linux. Will replace the installation link later (to linux versions, when ready), and the documentation still applies, just as an additional location of ~/.config./techscamblock/techscamblock.conf as well as the same directory as the executable. The one in ~/.config takes priority if both exist.
+> This is not made by the original team, but a simple port to linux. Will replace the installation link later (to linux versions, when ready), and the documentation still applies.
 > Also, obviously the program list will be changed to add on the linux variations of these, but the .exe klist will remain due to the existence of wine making it possible to run these in some cases.
 
 > [!NOTE]
