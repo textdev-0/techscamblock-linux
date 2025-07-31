@@ -13,7 +13,7 @@ Block remote access programs that are used by tech support scammers.
 Made for Windows 10/11.
 
 ## Installation
-See [Releases](https://github.com/ravendevteam/techscamblock/releases). Download the latest version for Windows.
+See ~~[Releases](https://github.com/ravendevteam/techscamblock/releases). Download the latest version for Windows.~~ Releases (will add later). Download the latest version for your distro.
 
 # Documentation
 Documentation is available [here](https://docs.ravendevteam.org/techscamblock).
