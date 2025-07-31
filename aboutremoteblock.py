@@ -10,6 +10,40 @@ _ACTIVE_POPUPS = []
 
 
 
+
+def is_problematic_wm():
+    #WMs where the overlay is known to cause issues
+    #check for substrings, so 'Hyprland' will match 'Hyprland'
+    tiling_wms = [ #always lower
+        "hyprland",
+        "sway",
+        "i3"
+        "bspwm",
+        "herbstluftwm",
+        "dwm",
+        "xmonad",
+        "awesomewm",
+        "qtile",
+        "spectrwm",
+        "leftwm",
+        "paperwm",
+        "river",
+        "dwm",
+        "catwm",
+        "frankenwm"
+    ]
+
+    desktop_env = os.environ.get('XDG_CURRENT_DESKTOP', '').lower()
+
+    if not desktop_env:
+        return False #assume floating if variable isnt set
+
+    for wm in tiling_wms:
+        if wm.lower() in desktop_env:
+            return True #known tiling WM
+
+    return False #likely a standard floating DE
+
 class FullScreenOverlay(QWidget):
     def __init__(self, geometry, parent=None):
         super().__init__(parent)
@@ -48,7 +82,8 @@ def show_scam_warning():
     if app is None:
         app = QApplication(sys.argv)
         created = True
-    overlays = [FullScreenOverlay(screen.geometry()) for screen in app.screens()]
+    if not is_problematic_wm:
+        overlays = [FullScreenOverlay(screen.geometry()) for screen in app.screens()]
     msg = QMessageBox()
     msg.setIcon(QMessageBox.Warning)
     msg.setWindowTitle("Likely Scam Prevented")
@@ -88,8 +123,9 @@ def show_scam_warning():
     update_button()
 
     def close_overlays():
-        for overlay in overlays:
-            overlay.close()
+        if not is_problematic_wm:
+            for overlay in overlays:
+                overlay.close()
         sm.detach()
         if msg in _ACTIVE_POPUPS:
             _ACTIVE_POPUPS.remove(msg)
