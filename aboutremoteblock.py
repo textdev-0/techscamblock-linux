@@ -1,4 +1,5 @@
 import sys
+import os
 from PyQt5.QtWidgets import QApplication, QMessageBox, QWidget
 from PyQt5.QtCore import Qt, QTimer, QSharedMemory
 from PyQt5.QtGui import QPainter, QColor
@@ -105,3 +106,4 @@ def show_scam_warning():
 
 if __name__ == "__main__":
     show_scam_warning()
+
