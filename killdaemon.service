@@ -1,0 +1,17 @@
+[Unit]
+Description=TechScamBlock Backend Daemon
+#start late/start after network ready1
+After=network.target
+
+[Service]
+#run as root
+User=root
+#start our python daemon
+#NOTE: use absolute paths for a real installation
+ExecStart=/usr/bin/python3 /opt/techscamblock/killdaemon.py
+#restart service if it ever fails
+Restart=on-failure
+
+[Install]
+#start this service automatically on boot
+WantedBy=multi-user.target

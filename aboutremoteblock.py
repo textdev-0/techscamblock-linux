@@ -10,14 +10,12 @@ _ACTIVE_POPUPS = []
 
 
 
-
 def is_problematic_wm():
     #WMs where the overlay is known to cause issues
-    #check for substrings, so 'Hyprland' will match 'Hyprland'
     tiling_wms = [ #always lower
         "hyprland",
         "sway",
-        "i3"
+        "i3",
         "bspwm",
         "herbstluftwm",
         "dwm",
@@ -90,7 +88,7 @@ def show_scam_warning():
     msg.setWindowFlags(Qt.WindowStaysOnTopHint | Qt.CustomizeWindowHint | Qt.WindowTitleHint)
     body_text = """
     <b>A real tech support agent will NEVER ask for access to your device. You should only ever give access to your device if you know exactly what you are doing, and you completely trust the person.</b><br><br>
-    
+
     There was an attempt to run a remote access tool on your device. <b>The remote access tool was stopped, so your system is safe</b>.<br><br>
 
     A remote access tool allows somebody else to access your computer. They can see your screen, read your files, and download malicious files.<br><br>
@@ -106,7 +104,7 @@ def show_scam_warning():
     ok_button = msg.addButton("OK (5)", QMessageBox.AcceptRole)
     ok_button.setEnabled(False)
     countdown = 5
-    
+
     def update_button():
         nonlocal countdown
         if countdown > 0:
@@ -129,7 +127,7 @@ def show_scam_warning():
         sm.detach()
         if msg in _ACTIVE_POPUPS:
             _ACTIVE_POPUPS.remove(msg)
-        
+
     msg.buttonClicked.connect(close_overlays)
     msg.finished.connect(close_overlays)
     msg.setWindowFlag(Qt.WindowCloseButtonHint, False)
