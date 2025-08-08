@@ -1,5 +1,7 @@
 
 # TechScamBlock
+> [!NOTE]
+> This is not developed by me. THis is a port from Raven Software to work on linux. Releases for platform specific coming soon (tm) but the python files are done. The docs still apply, except the config directory is now /etc/techscamblock/techscamblock.conf
 
 > [!NOTE]
 > All of our free software is designed to respect your privacy, while being as simple to use as possible. Our free software is licensed under the [BSD-3-Clause license](https://ravendevteam.org/files/BSD-3-Clause.txt). By using our software, you acknowledge and agree to the terms of the license.
@@ -9,14 +11,16 @@ Block remote access programs that are used by tech support scammers.
 Made for Windows 10/11.
 
 ## Installation
-See [Releases](https://github.com/ravendevteam/techscamblock/releases). Download the latest version for Windows.
+See ~~[Releases](https://github.com/ravendevteam/techscamblock/releases).~~ Releases [coming soon (tm)] Download the latest version for ~~Windows~~ your Linux distro.
 
 # Documentation
 Documentation is available [here](https://docs.ravendevteam.org/techscamblock).
 
-To compile from source, make sure you have Python 3.12.4 or greater, and Nuitka, install dependencies from the `requirements.txt`, then run `build.bat`.
+To compile from source, make sure you have Python 3.12.4 or greater, and Nuitka, install dependencies from the `requirements.txt`, then run ~~`build.bat`~~ `build.sh`.
 
 ## Authors & Contributors
 
 - [Raven Development Team](https://ravendevteam.org/)
 - [Icons by Icons8](https://icons8.com/)
+
+- [Linux port](https://github.com/textdev-0/techscamblock-linux/)
