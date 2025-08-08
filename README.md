@@ -16,7 +16,15 @@ See ~~[Releases](https://github.com/ravendevteam/techscamblock/releases).~~ Rele
 # Documentation
 Documentation is available [here](https://docs.ravendevteam.org/techscamblock).
 
-To compile from source, make sure you have Python 3.12.4 or greater, and Nuitka, install dependencies from the `requirements.txt`, then run ~~`build.bat`~~ `build.sh`.
+To install across distros from source, make sure you have Python 3.12.4 or greater, ~~and Nuitka,~~ download/pull this repo, install dependencies from the `requirements.txt`, then run ~~`build.bat`~~ `install.sh`.
+
+To build from source, download/pull this repo, intall platform-specific tools (listed below), then run `build_YOUR-DISTRO.sh`.
+This only builds the proper package file, and does not install it. You need to run the said package file (with an internet connection, due to depends)
+
+## Platform-specific tools needed:
+`build_DEB.sh`: for Pop!_OS, Ubuntu, Debian, Linux Mint, and other Debian derivatives - `dpkg-dev` (`sudo apt install dpkg-dev`)
+
+Thats it for now
 
 ## Authors & Contributors
 
@@ -24,3 +32,4 @@ To compile from source, make sure you have Python 3.12.4 or greater, and Nuitka,
 - [Icons by Icons8](https://icons8.com/)
 
 - [Linux port](https://github.com/textdev-0/techscamblock-linux/)
+
