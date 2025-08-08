@@ -1,6 +1,0 @@
-Package: techscamblock
-Version: 1.0.0
-Architecture: amd64
-Maintainer: Your Name <you@example.com>
-Description: Blocks remote access tools used by scammers.
-Depends: python3, python3-pyqt5, python3-psutil, python3-plyer
