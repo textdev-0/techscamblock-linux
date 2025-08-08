@@ -1,4 +1,8 @@
 import sys, os, re, urllib.request, getpass, threading, socket, time
+
+# Add the installation directory to the Python path
+sys.path.append('/opt/techscamblock')
+
 from plyer import notification
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtCore import QObject, pyqtSignal
