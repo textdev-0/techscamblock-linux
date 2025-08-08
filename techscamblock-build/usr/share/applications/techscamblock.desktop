@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=TechScamBlock
+Comment=Blocks remote access tools used by scammers.
+Exec=/usr/bin/techscamblock
+Icon=/opt/techscamblock/tray.png
+Terminal=false
