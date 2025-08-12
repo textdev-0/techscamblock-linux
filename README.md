@@ -8,7 +8,7 @@
 
 Block remote access programs that are used by tech support scammers.
 
-~~Made for Windows 10/11.~~ Linux
+Made ~~for Windows 10/11.~~ Linux.
 
 ## Installation
 See [Releases](https://github.com/textdev-0/techscamblock-linux/releases/tag/1.0.0) and Download the latest version for ~~Windows~~ your Linux distro.
@@ -32,6 +32,7 @@ Thats it for now
 - [Icons by Icons8](https://icons8.com/)
 
 - [Linux port](https://github.com/textdev-0/techscamblock-linux/)
+
 
 
 
